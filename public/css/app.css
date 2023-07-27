@@ -1,0 +1,59 @@
+  .banner {
+    position: relative;
+    text-align: center;
+  }
+
+  .banner img {
+    width: 100%;
+    height: 350px;
+  }
+
+  
+  .right-content{
+    position: absolute;
+    top: 50%;    
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 26px;
+  }
+
+  .left-content {
+    left: 0;
+    padding-left: 0px;
+  }
+
+  .right-content {
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+  }
+
+  .navbar{
+    background-color: #9E94EDff ;
+  }
+
+  .nav-link{
+    color: #fff
+
+  }
+
+  .hr{
+    background-color: #8579DCff ;
+  }
+
+  .footer{
+    background-color:#8579DCff;
+    color: #fff;
+    font-size:16px;
+  }
+
+  
+
+
+
+
+
+
+
+
+
