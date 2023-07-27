@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const EventSchema = new Schema({
+const BookSchema = new Schema({
     title: String,
-    eventimage: String,    
+    bookimage: String,    
     date: String,
     duration: String,
     description: String,
-    zoomlink: String,
+    link: String,
     
     
     
 });
 
-module.exports = mongoose.model('Event', EventSchema);
+module.exports = mongoose.model('Bookreading', BookSchema);
