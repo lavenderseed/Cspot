@@ -1,0 +1,46 @@
+<% layout('layouts/boilerplate') %>
+
+
+    <h1>All Books</h1>
+
+    <!--% if(currentUser._id== '64b4881de5fd48f8dc06b142') {%>
+        <div>
+            <a href="/bookreadings/new">Add Book</a>
+        </div>
+    %} %>-->
+    
+    <% for (let bookreading of bookreadings) {%>
+               
+        <div class="card mb-3" >
+            <div class="row g=0 ">
+
+                <div class="col-md-4">
+                    <img class="img-fluid rounded-start  h-auto" src="<%= bookreading.bookimage %>" alt="Image" >
+                </div>                
+
+                <div class="col-md-8 ">
+                    <div class="card-header"> Title: <%= bookreading.title %></div>
+                    <div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Date: <%= bookreading.date %></li>
+                            <li class="list-group-item">Duration: <%= bookreading.duration %></li>
+                            <li class="list-group-item">
+                                <small class="text-body-secondary">
+                                    Description:
+                                    <p>
+                                        <%= bookreading.description %>
+                                    </p>
+                                </small>
+                            </li>
+                            <li class="list-group-item">
+                                <a class="btn btn-primary" href="/bookreadings/<%= bookreading.id %>" >Details</a>
+                            </li>                                
+                        </ul>
+                    </div>           
+                </div>
+            </div>
+        </div>            
+    <% }%>
+
+
+    

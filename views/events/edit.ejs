@@ -1,0 +1,65 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="row">
+    <h1 class="text-center">Edit Event</h1>
+    <div class="col-6 offset-3">
+        <form action="/events/<%= events._id %>?_method=PUT" method="POST" novalidate class="validated-form">
+            <div class="mb-3">
+                <label class="form-lable" for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="events[title]" value="<%= events.title %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+        
+            <div class="mb-3">
+                <label class="form-lable" for="date">Date</label>
+                <input class="form-control" type="text" id="date" name="events[date]" value="<%= events.date %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+        
+            <div class="mb-3">
+                <label class="form-lable" for="duration">Duration</label>
+                <input class="form-control" type="text" id="duration" name="events[duration]" value="<%= events.duration %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+        
+            <div class="mb-3">
+                <label class="form-lable" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="events[description]" required><%= events.description %></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-lable" for="zoomlink">Zomm Link</label>
+                <input class="form-control" type="text" id="zoomlink" name="events[zoomlink]" value="<%= events.zoomlink %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-lable" for="eventimage">Image Url</label>
+                <input class="form-control" type="text" id="eventimage" name="events[eventimage]" value="<%= events.eventimage %>"required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-info">Update Event</button>
+            </div>
+        </form>
+
+        <div class="mb-3">
+            <a href="/events">Back To Events</a>
+        </div>
+
+    </div>
+</div>

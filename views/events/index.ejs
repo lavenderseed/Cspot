@@ -1,0 +1,48 @@
+<% layout('layouts/boilerplate') %>
+
+
+    <h1>All Events</h1>
+
+    <!--% if(currentUser._id== '64b4881de5fd48f8dc06b142') {%>
+    <div>
+        <a href="/events/new">Add Event</a>
+    </div>
+    %} %>-->
+    
+    <% for (let event of events) {%>
+               
+        <div class="card mb-3" >
+            <div class="row g=0 ">
+
+                <div class="col-md-4">
+                    <img class="img-fluid rounded-start  h-auto" src="<%= event.eventimage %>" alt="Image" >
+                </div>                
+
+                <div class="col-md-8 ">
+                    <div class="card-header"> Title: <%= event.title %></div>
+                    <div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Date: <%= event.date %></li>
+                            <li class="list-group-item">Duration: <%= event.duration %></li>
+                            <li class="list-group-item">
+                                <small class="text-body-secondary">
+                                    Description:
+                                    <p>
+                                        <%= event.description %>
+                                    </p>
+                                </small>
+                            </li>
+                            <li class="list-group-item">
+                                <a class="btn btn-primary" href="/events/<%= event.id %>" >Details</a>
+                            </li>                                
+                        </ul>
+                    </div>           
+                </div>
+            </div>
+        </div>            
+    <% }%>
+
+   
+       
+    
+    

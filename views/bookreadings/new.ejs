@@ -1,0 +1,72 @@
+<% layout('layouts/boilerplate') %>
+
+
+
+
+<div class="row">
+    <h1 class="text-center">New Book</h1>
+    <div class="col-6 offset-3">
+        <form action="/bookreadings" method="POST" novalidate class="validated-form" >
+            <div class="mb-3">
+                <label class="form-lable" for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="bookreadings[title]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+        
+            <div class="mb-3">
+                <label class="form-lable" for="date">Date</label>
+                <input class="form-control" type="text" id="date" name="bookreadings[date]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+        
+            <div class="mb-3">
+                <label class="form-lable" for="duration">Duration</label>
+                <input class="form-control" type="text" id="duration" name="bookreadings[duration]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+        
+            <div class="mb-3">
+                <label class="form-lable" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="bookreadings[description]" required></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-lable" for="link">Link</label>                
+                <input class="form-control"  type="text" id="link" name="bookreadings[link]" required>              
+                <div class="valid-feedback">
+                    Looks good!
+                </div>                
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-lable" for="bookimage">Image Url</label>
+                <input class="form-control" type="text" id="bookimage" name="bookreadings[bookimage]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <% if(currentUser._id== '64b4881de5fd48f8dc06b142') {%>
+                <div class="mb-3">
+                    <button class="btn btn-success">Add Book</button>
+                </div>
+            <%} %> 
+
+        </form>
+        
+        <div class="mb-3">
+            <a href="/bookreadings">All Books</a>
+        </div>    
+        
+
+    </div>
+</div>
